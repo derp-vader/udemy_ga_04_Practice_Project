@@ -3,6 +3,8 @@ on: issues
 jobs:
     issue-info:
         runs-on: ubuntu-latest
+        env:
+            GITHUB_EVENT: ${{ toJson(github.event) }}
         steps:
             - name: print issue details
-              run: echo "${{ toJson(github.event) }}"
+              run: echo $GIThub_EVENT
