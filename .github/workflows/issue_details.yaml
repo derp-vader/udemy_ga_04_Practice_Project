@@ -7,4 +7,4 @@ jobs:
             GITHUB_EVENT: ${{ toJson(github.event) }}
         steps:
             - name: print issue details
-              run: echo $GIThub_EVENT
+              run: echo $GITHUB_EVENT
